@@ -2,11 +2,15 @@
 grade calculator function that takes the earned points and total possible points as arguments, and returns the score in a detailed string.
 
 
-const gradeCalc = function (earned, possible) {
+function gradeCalc(earned, possible) {
+
   if (typeof earned !== 'number' || typeof possible !== 'number') {
+  
     throw Error('please provide numbers only!')
 }
+
     const score = (earned / possible) * 100
+    
     let letterGrade = ' '
     
     if (score >= 90) {
